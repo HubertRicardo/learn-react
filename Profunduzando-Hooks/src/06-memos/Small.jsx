@@ -1,8 +1,7 @@
-// import { useMemo } from "react";
+// import { memo } from 'react';
 
-// export const Small = useMemo(
-//   ({ value }) => {
-//     return <Small>{value}</Small>;
-//   },
-//   [second]
-// );
+export const Small = ({ value }) => {
+  console.log(" Me volví a dibujar :( ");
+
+  return <small>{value}</small>;
+};
