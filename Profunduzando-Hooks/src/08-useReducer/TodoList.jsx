@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
+import { TodoItem } from "./TodoItem";
 
-export const TodoList = ({ todos }) => {
+export const TodoList = ({ todos = [] }) => {
   return (
     <ul className="todo-list">
       {todos.map((todo) => (
-        <li key={todo.id}>
-          <span>{todo.description}</span>
-          <button onClick={() => {}}>Borrar</button>
-        </li>
+        <TodoItem todo={todo} key={todo.id} />
       ))}
     </ul>
   );

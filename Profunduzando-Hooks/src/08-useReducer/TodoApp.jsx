@@ -17,19 +17,26 @@ const initialSate = [
   },
 ];
 
+const handleNewTodo = (todo) => {
+  console.log(todo);
+};
+
 export const TodoApp = () => {
   const [todos, dispatchTodo] = useReducer(todoReducer, initialSate);
+  console.log(dispatchTodo);
   return (
     <>
       <h1>
-        Todo List (10) <small>Pendientes</small>{" "}
+        Todo List: 10, <small>Pendientes: 2</small>{" "}
       </h1>
       <hr />
       <div className="container-list">
-        <TodoList todos={todos} dispatchTodo={dispatchTodo} />
+        <TodoList todos={todos} />
       </div>
       <div>
-        <TodoAdd />
+        <h4>Agregar TODO</h4>
+        <hr />
+        <TodoAdd onNewTodo={handleNewTodo} />
       </div>
     </>
   );
