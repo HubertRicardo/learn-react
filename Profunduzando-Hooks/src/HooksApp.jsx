@@ -1,13 +1,10 @@
-import { CallbackHook } from "./06-memos/CallbackHook";
-
-import "./08-useReducer/intro-reducer";
+import { TodoApp } from "./08-useReducer/TodoApp";
 
 export function HooksApp() {
   return (
     <div>
       <h1>HooksApp</h1>
-      {/* <Layout /> */}
-      <CallbackHook />
+      <TodoApp />
     </div>
   );
 }
