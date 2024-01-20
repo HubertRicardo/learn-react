@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-export const TodoItem = ({ todo }) => {
+export const TodoItem = ({ todo, onDeleteTodo }) => {
   return (
     <>
       <li>
         <span>{todo.description}</span>
-        <button onClick={() => {}}>Borrar</button>
+        <button onClick={() => onDeleteTodo(todo.id)}>Borrar</button>
       </li>
     </>
   );
@@ -13,4 +13,5 @@ export const TodoItem = ({ todo }) => {
 
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired,
+  onDeleteTodo: PropTypes.func,
 };
