@@ -41,10 +41,13 @@ export const useTodo = () => {
       payload: id,
     });
   };
+
   return {
     handleDeleteTodo,
     handleToggleTodo,
     handleNewTodo,
     todos,
+    pendigTodos: todos.filter((todo) => !todo.done).length,
+    todosCount: todos.length,
   };
 };
