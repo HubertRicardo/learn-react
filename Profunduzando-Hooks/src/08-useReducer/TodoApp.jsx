@@ -17,13 +17,16 @@ const initialSate = [
   },
 ];
 
-const handleNewTodo = (todo) => {
-  console.log(todo);
-};
-
 export const TodoApp = () => {
-  const [todos, dispatchTodo] = useReducer(todoReducer, initialSate);
-  console.log(dispatchTodo);
+  const [todos, dispatch] = useReducer(todoReducer, initialSate);
+
+  const handleNewTodo = (todo) => {
+    const action = {
+      type: "[TODO] Add Todo",
+      payload: todo,
+    };
+    dispatch(action);
+  };
   return (
     <>
       <h1>
