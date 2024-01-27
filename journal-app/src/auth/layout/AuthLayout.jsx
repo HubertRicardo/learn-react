@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-export const AuthLayout = () => {
+export const AuthLayout = ({ children, title = "" }) => {
   return (
     <Grid
       container
@@ -14,12 +15,23 @@ export const AuthLayout = () => {
         item
         className="box-shadow"
         xs={3}
-        sx={{ backgroundColor: "white", padding: 3, borderRadius: 2 }}
+        sx={{
+          width: { sm: 450 },
+          backgroundColor: "white",
+          padding: 3,
+          borderRadius: 2,
+        }}
       >
         <Typography variant="h5" sx={{ mb: 1 }}>
-          Login
+          {title}
         </Typography>
+        {children}
       </Grid>
     </Grid>
   );
+};
+
+AuthLayout.propTypes = {
+  children: PropTypes.object,
+  title: PropTypes.string,
 };
