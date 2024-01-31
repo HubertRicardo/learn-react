@@ -19,5 +19,5 @@ export const JournalLayout = ({ children }) => {
 };
 
 JournalLayout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
 };
