@@ -10,9 +10,28 @@ const formData = {
   displayName: "Hubert Ricardo",
 };
 
+const formValidations = {
+  email: [(value) => value.includes("@"), "El correo debe de tener una @"],
+  password: [
+    (value) => value.length >= 6,
+    "El password debe de tener mas de 6 digitos",
+  ],
+  displayName: [(value) => value.length >= 1, "El nombre es obligatorio"],
+};
+
 export const RegisterPage = () => {
-  const { displayName, onInputChange, email, password, formState } =
-    useForm(formData);
+  const {
+    displayName,
+    onInputChange,
+    email,
+    password,
+    formState,
+    displayNameValid,
+    emailValid,
+    passwordValid,
+  } = useForm(formData, formValidations);
+
+  console.log(displayNameValid);
 
   const onSubmit = (event) => {
     event.preventDefault();
