@@ -36,6 +36,7 @@ export const calendarSlice = createSlice({
         return event;
       });
     },
+    onDelete,
   },
 });
 
