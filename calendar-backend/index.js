@@ -7,6 +7,9 @@ const app = express();
 // public directory
 app.use(express.static("public"));
 
+//leactura y parseo del body
+app.use(express.json());
+
 //routes
 //TODO auth // create, login,renew
 app.use("/api/auth", require("./routes/auth"));
