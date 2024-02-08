@@ -1,0 +1,3 @@
+db user: mern-user
+db pass: wpJ0l7GKQSUMPgSi
+url: mongodb+srv://mern-user:wpJ0l7GKQSUMPgSi@cluster0.wmiabpa.mongodb.net/mern_calendar
