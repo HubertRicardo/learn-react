@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect(process.env.DB_CNN, {
-      useNewUrlParse: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    });
+    // await mongoose.connect(process.env.DB_CNN, {
+    //   useNewUrlParse: true,
+    //   useUnifiedTopology: true,
+    //   useCreateIndex: true,
+    // });
+    await mongoose.connect(
+      "mongodb+srv://mern-user:wpJ0l7GKQSUMPgSi@cluster0.wmiabpa.mongodb.net/mern_calendar"
+    );
 
     console.log("DB Online");
   } catch (error) {
