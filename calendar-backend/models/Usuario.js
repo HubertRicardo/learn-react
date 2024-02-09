@@ -7,6 +7,13 @@ const UsuarioSchema = Schema({
   },
   email: {
     type: String,
-    re,
+    require: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    require: true,
   },
 });
+
+module.exports = model("Usuario", UsuarioSchema);
