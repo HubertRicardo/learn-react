@@ -8,6 +8,7 @@ const dbConnection = async () => {
     //   useCreateIndex: true,
     // });
     await mongoose.connect(
+      // provider.env.DB_CNN
       "mongodb+srv://mern-user:wpJ0l7GKQSUMPgSi@cluster0.wmiabpa.mongodb.net/mern_calendar"
     );
 
