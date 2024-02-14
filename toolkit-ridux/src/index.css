@@ -2,8 +2,10 @@ body {
   padding: 50px;
   margin: 0;
   display: flex;
+  background-color: bisque;
 }
 
 h1 {
   font-size: 3em;
+  margin: 2px;
 }
