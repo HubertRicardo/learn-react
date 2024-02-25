@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const dbConnection = async () => {
   try {
     await mongoose.connect(
-      // process.env.DB_CNN
-      "mongodb+srv://mern-user:wpJ0l7GKQSUMPgSi@cluster0.wmiabpa.mongodb.net/mern_calendar"
+      "mongodb+srv://Mern-calendar:y3WlkfG2RAFL4V7e@calendar.9x9ntfp.mongodb.net/mern_calendar"
     );
 
     console.log("DB Online");

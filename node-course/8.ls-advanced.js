@@ -1,11 +1,11 @@
 const { error } = require("node:console");
 const fs = require("node:fs/promises");
 
-const folder = process.argv[2] || ".";
+const folder = process.argv[2] ?? ".";
 
 //se tiene otro tipo de lista
 //Podemos pasar la carpeta donde queres x ejemplo el ls
-fs.readdir(".")
+fs.readdir(folder)
   .then((files) => {
     files.forEach((file) => {
       console.log(file);
