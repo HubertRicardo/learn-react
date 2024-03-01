@@ -18,6 +18,7 @@ const processRequest = (req, res) => {
 
 const server = http.createServer(processRequest);
 
+//aqui se llama para que aparesca
 server.listen(1234, () => {
   console.log("Server listening on port http://localhost:1234");
 });
