@@ -1,5 +1,6 @@
 const http = require("node:http");
 
+// este es un ejemplo con http bruto sin usar un framework
 const processRequest = (req, res) => {
   const { method, url } = req;
   switch (method) {
