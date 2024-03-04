@@ -7,6 +7,8 @@ const processRequest = (req, res) => {
   const { method, url } = req;
 
   switch (method) {
+    //peticion get
+    // solicita al servidor una información o recurso concreto.
     case "GET":
       switch (url) {
         case "/pokemon/ditto":
@@ -18,6 +20,8 @@ const processRequest = (req, res) => {
           return res.end("<h1>404</h1>");
       }
 
+    //peticion post
+    //sirve para rastrear recursos que las páginas solicitan de forma automática
     case "POST":
       switch (url) {
         case "/pokemon": {
