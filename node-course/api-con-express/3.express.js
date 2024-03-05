@@ -4,6 +4,7 @@ const path = require("path");
 
 const PORT = process.env.PORT ?? 1234;
 
+//Se llama a express
 const app = express();
 app.disable("x-powered-by");
 
@@ -30,10 +31,12 @@ app.use(express.json());
 //   })
 // })
 
+//metodo get
 app.get("/pokemon/ditto", (req, res) => {
   res.json(ditto);
 });
 
+//metodo post
 app.post("/pokemon", (req, res) => {
   // req.body deberíamos guardar en bbdd
   res.status(201).json(req.body);
